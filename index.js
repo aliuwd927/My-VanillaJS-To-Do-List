@@ -4,5 +4,10 @@ const inputToDoText = document.querySelector('.inputToDoText');
 addToDo.addEventListener('click', addToBody);
 
 function addToBody(event) {
-    console.log(inputToDoText.value);
+    event.preventDefault();
+
+    
+    const listOfToDo = [];
+        listOfToDo.push(inputToDoText.value);
+    console.log(listOfToDo);
 };
