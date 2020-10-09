@@ -27,16 +27,11 @@
     border-color: black;
   }
   
-  .inputToDoText{
-    
-  }
-  
   .addToDo{
     position:absolute;
     top: 55%;
     right: 48.45%;
   }
-  
   
   .todoList_Container{
     width:100%;
