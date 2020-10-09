@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding 0;
+    padding: 0;
     box-sizing: border-box;
   }
   
@@ -33,8 +33,8 @@
   
   .addToDo{
     position:absolute;
-    top: 54%;
-    right: 47.75%;
+    top: 55%;
+    right: 48.45%;
   }
   
   
