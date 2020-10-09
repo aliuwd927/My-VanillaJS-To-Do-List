@@ -1,7 +1,8 @@
 const addToDo = document.querySelector('addToDo');
+const inputToDoText = document.querySelector('inputToDoText');
 
-const addToBody = () => {
-    const newDiv = document.createElement('div');
-        const newContent = document.createTextNode('Im inside the div container!');
-            newDiv.appendChild(newContent);
+addToDo.addEventListener('click', addToBody);
+
+function addToBody() {
+    console.log('works');
 };
