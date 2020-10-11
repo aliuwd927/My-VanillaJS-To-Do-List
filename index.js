@@ -2,7 +2,7 @@ const todoInput = document.querySelector('.inputToDoText');
 const addToDo = document.querySelector('.addToDo');
 const todoList = document.querySelector('.todoList');
 
-todoButton.addEventListener('click', addToBody);
+addToDo.addEventListener('click', addToBody);
 
 function addToBody(){
 
@@ -12,7 +12,7 @@ function addToBody(){
 
   //Create LI
   const newTodo = document.createElement('li');
-  newTodo.innerText = 'test';
+  newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
