@@ -22,7 +22,10 @@ function addToBody(){
   todoDiv.appendChild(completedButton);
 
   //Create Trash Button
-
+  const trashButton = document.createElement('button');
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add('trash-btn');
+  todoDiv.appendChild(trashButton);
 
   //Append to list
   todoList.appendChild(todoDiv);
