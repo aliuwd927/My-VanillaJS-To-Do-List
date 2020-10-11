@@ -17,11 +17,14 @@ function addToBody(){
 
   //Create Completed Button
   const completedButton = document.createElement('button');
-  completedButton.innerHTML = `<i class="fas fa-check"></i>`;
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add('complete-btn');
   todoDiv.appendChild(completedButton);
 
+  //Create Trash Button
+
+
   //Append to list
   todoList.appendChild(todoDiv);
-  
+
 };
