@@ -5,6 +5,7 @@ const todoList = document.querySelector('.todoList');
 addToDo.addEventListener('click', addToBody);
 
 function addToBody(){
+
   //Create To Do Divs
   const todoDiv = document.createElement('div');
   todoDiv.classList.add("todo");
@@ -16,10 +17,11 @@ function addToBody(){
 
   //Create Completed Button
   const completedButton = document.createElement('button');
-  completedButton.innerText = '<i class="fas fa-check"></i>';
-  completedButton.classList.add('completedButton');
-  completedButton.appendChild(completedButton);
+  completedButton.innerHTML = `<i class="fas fa-check"></i>`;
+  completedButton.classList.add('complete-btn');
+  todoDiv.appendChild(completedButton);
 
   //Append to list
   todoList.appendChild(todoDiv);
+  
 };
