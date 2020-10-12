@@ -2,10 +2,15 @@ const todoInput = document.querySelector('.inputToDoText');
 const addToDo = document.querySelector('.addToDo');
 const todoList = document.querySelector('.todoList');
 
+//Uses the created trash button from addToBody function to delete the entry todo list
+
+
+
 addToDo.addEventListener('click', addToBody);
+todoList.addEventListener('click', removeFromBody);
 
-function addToBody(){
-
+function addToBody(e){
+  e.preventDefault();
   //Create To Do Divs
   const todoDiv = document.createElement('div');
   todoDiv.classList.add("todo");
@@ -29,5 +34,18 @@ function addToBody(){
 
   //Append to list
   todoList.appendChild(todoDiv);
+
+};
+
+function removeFromBody(e){
+  //console.log(e.target);
+  
+  const item = e.target;
+    if(item.classList[0] === 'trash-btn' || item.classList[0] === 'complete-btn'){
+      const todo = item.parentElement;
+      todo.remove();
+    };
+
+  
 
 };
