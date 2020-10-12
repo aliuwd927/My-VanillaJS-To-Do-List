@@ -1,6 +1,7 @@
 const todoInput = document.querySelector('.inputToDoText');
 const addToDo = document.querySelector('.addToDo');
 const todoList = document.querySelector('.todoList');
+const filterToDo = document.querySelector('.dropDown');
 
 //Uses the created trash button from addToBody function to delete the entry todo list
 
