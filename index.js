@@ -9,6 +9,7 @@ const filterToDo = document.querySelector('.dropDown');
 
 addToDo.addEventListener('click', addToBody);
 todoList.addEventListener('click', removeFromBody);
+filterToDo.addEventListener('click', filterItems);
 
 function addToBody(e){
   e.preventDefault();
@@ -42,11 +43,32 @@ function removeFromBody(e){
   //console.log(e.target);
   
   const item = e.target;
-    if(item.classList[0] === 'trash-btn' || item.classList[0] === 'complete-btn'){
+    if(item.classList[0] === 'trash-btn'){
       const todo = item.parentElement;
       todo.remove();
     };
 
+    if(item.classList[0] === 'complete-btn'){
+      const todo = item.parentElement;
+      todo.classList.toggle('completed');
+    }
   
 
+};
+
+function filterItems(e){
+  const todos = todoList.childNodes;
+  todos.forEach(function(){
+    switch(e.target.value){
+      case "all":
+        todo.style.display ='flex';
+        break;
+      case "completed":
+        if(todo.classList.contains('completed')){
+          todo.style.display = 'flex';
+        } else{
+          todo.style.display= 'none';
+        }
+    }
+  });
 };
