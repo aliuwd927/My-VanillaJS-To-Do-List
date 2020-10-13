@@ -9,7 +9,7 @@ const filterToDo = document.querySelector('.filter-todo');
 
 addToDo.addEventListener('click', addToBody);
 todoList.addEventListener('click', removeFromBody);
-//filterToDo.addEventListener('click', filterItems);
+filterToDo.addEventListener('click', filterItems);
 
 function addToBody(e){
   e.preventDefault();
@@ -37,6 +37,7 @@ function addToBody(e){
   //Append to list
   todoList.appendChild(todoDiv);
 
+  todoInput.value = '';
 };
 
 function removeFromBody(e){
@@ -52,45 +53,38 @@ function removeFromBody(e){
   if (item.classList[0] === "complete-btn") {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
-    console.log(todo);
   }
   
 
 };
 
-
-
-
-
-
-
-
-
-
-/*
-function filterItems(e) {
+function filterItems(event) {
   const todos = todoList.childNodes;
   todos.forEach(function(todo) {
-    switch (e.target.value) {
+    switch (event.target.value) {
       case "all":
         todo.style.display = "flex";
+        console.log(event.target);
         break;
       case "completed":
         if (todo.classList.contains("completed")) {
           todo.style.display = "flex";
-          console.log('you have selected ');
+          console.log(event.target);
         } else {
           todo.style.display = "none";
+          console.log(event.target);
         }
         break;
-      case "uncompleted":
+      case "incomplete":
         if (!todo.classList.contains("completed")) {
           todo.style.display = "flex";
+          console.log(event.target);
         } else {
           todo.style.display = "none";
+          console.log(event.target);
         }
+        break;
     }
   });
 }
 
-*/
